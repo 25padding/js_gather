@@ -1,0 +1,9 @@
+     .icon_one2 {
+            display: block;
+            width: .88rem;
+            height: .66rem;
+            background: url(./images/sprite_.png) 1PX -6.54rem no-repeat;
+/背景图的大小一定要记得
+            background-size: 2.27rem 7.16rem;
+            margin: 0 auto;
+        }

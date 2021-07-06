@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsonp跨域</title>
+</head>
+
+<body>
+
+</body>
+<script src="../static/ajax.js"></script>
+<script src="http://127.0.0.1:8000/test?callback=getUserInfo">
+</script>
+<!-- 利用script标签不受通元策略的 -->
+
+<!-- script > // ajax("http://127.0.0.1:8000/chkUsername", function(data) { // console.log(date); // }) // 创建一个全局的，希望这个函数被服务器调用 function getUserInfo(data) { console.log(data); }
+</> -->
+<script>
+    function getUserInfo(data) {
+        console.log(data);
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,2 @@
+border-bottom: 0.3rem solid;
+border-image: linear-gradient(to right, #d165ec, #5873ff)1 10;

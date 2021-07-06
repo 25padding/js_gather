@@ -1,0 +1,48 @@
+
+    <!-- 接口 ，
+
+参考网址：https://console.amap.com/dev/key/app
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地图</title>
+
+
+    <style>
+        html,
+        body {
+            font-size: 100px;
+        }
+        
+        #container {
+            width: 4rem;
+            height: 5rem;
+        }
+    </style>
+    <link rel="stylesheet" href="">
+
+
+</head>
+
+<body>
+    <div id="container"></div>
+    <!-- <script src=""></script> -->
+    <!-- 接口 -->
+    <!--是自己的秘钥：79875f40d0deb3acf229147ab5e413ea -->
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key= 79875f40d0deb3acf229147ab5e413ea"></script>
+
+</body>
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+        center: [117.000923, 36.675807],
+        zoom: 11
+    });
+</script>
+
+</html>

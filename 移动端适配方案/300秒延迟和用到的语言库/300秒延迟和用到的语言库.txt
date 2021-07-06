@@ -1,0 +1,77 @@
+普遍的
+
+    版本：1.06
+开发版本
+<script src="https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+相等的和上面
+https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.js
+上线版本
+https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.min.js
+<script src="https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+版本：1.05
+<script src="https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.5/fastclick.js"></script>
+https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.5/fastclick.js
+上线版本
+<script src="https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.5/fastclick.min.js"></script>
+https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.5/fastclick.min.js
+
+
+
+还要加话语的
+如果网站是jquery 的用下面的映入的
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js
+上线版本的
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
+
+
+   // 使用了jquery的时候
+
+    $(function() {
+
+        FastClick.attach(document.body);
+
+    });
+
+    // 没使用jquery的时候
+
+    if ('addEventListener' in document) {
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            FastClick.attach(document.body);
+
+        }, false);
+
+    }
+
+    ```
+
+    在vue中使用
+
+    ```js
+
+    // 安装
+
+    npm install fastclick -S
+
+    // 引入
+
+    import FastClick from 'fastclick'
+
+    // 使用
+
+    FastClick.attach(document.body);
+
+作者：有田春雪
+链接：https://www.jianshu.com/p/67bae6dfca90
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+vue 
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.1.2/vue.cjs.js"></script>
+https://cdn.bootcdn.net/ajax/libs/vue/3.1.2/vue.cjs.js
+上线版本
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.1.2/vue.cjs.min.js"></script>
+https://cdn.bootcdn.net/ajax/libs/vue/3.1.2/vue.cjs.min.js

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>异步验证用户是否存在，表单验证</title>
+</head>
+
+<body>
+    <form action="">
+        <label for=""> 用户名：</label> <input name="username" type="text" placeholder="请输入用户名">
+        <span></span>
+    </form>
+
+
+
+</body>
+<script>
+    //失去焦点进行验证，是可以失去焦点得到真正的用户名
+    //获取对象
+    //1.初始化XMKhttpRequestG，对象  
+    var username = document.querySelector("input[name ='username']")
+        // 失去焦点时是否存在
+    username.onblur = function() {
+
+
+        if (window.XMLHttpRequest) {
+            var xhr = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //2.声明请求地址以及请求方式
+
+        xhr.open("GET", "http://192.168.1.21:3000/chkUsername?username=" + username.value, true);
+        //    true是异步，faste是同步
+
+        //发送请求
+        xhr.send();
+        //获取服务器端的响应数据
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+                // 将返回的JSON字符串转换为JSON对象
+                data = JSON.parse(xhr.responseText);
+                // 根据返回结果，显示验证信息
+                var color = "red"
+                if (data.status == "ok") {
+                    color = "green";
+                }
+                username.nextElementSibling.innerHTML = data.msg;
+                username.nextElementSibling.style.color = color;
+            }
+        }
+    }
+</script>
+
+</html>

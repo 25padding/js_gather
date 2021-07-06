@@ -1,0 +1,168 @@
+12.14
+result 结果
+float 浮点数
+Int 整数
+Mouse 鼠标
+Move 移动
+var 变量
+String 字符串
+Boolean 布尔型
+function 函数
+alert（）警示栏
+write 写
+count计算
+result计算
+move 移动
+parse从语法上分析
+object 对象
+while 当.....时
+switch  开关
+result结果
+float 浮点类型
+parseInt 整数
+mouse 鼠标
+move 
+function 函数
+alert（）警示框
+write写
+parse 从语法上分析
+count计算
+undefined 不明确的
+switch 开关
+while当 的时候
+Javascrip 基于对象和语言
+object对象
+second 第二
+third 第三
+alert 警示框
+second 第一
+third 第三
+ element 失去焦点
+element 失去焦点
+change 变化
+change 变化
+onclick 点击
+load 加载
+element 元素
+Blur 失去焦点
+Blur 失去焦点
+Blur失去焦点
+over在。。之上
+sore 分数
+toFixed 四舍五入
+toFixed 
+toFixed
+Window 窗口
+continue 继续
+continue 继续
+break 打断
+score 分数
+Replace 取代
+Replace 取代
+Forword 向前
+back 后退
+statu 状态
+statu状态
+screen
+history
+location
+location 位置
+event 事件
+confirm
+确定
+confirm
+prompt 提示
+answer 回答
+pass通过
+pass 
+ 会话
+dialog 会哈
+ eval 转换
+answer 回答
+timeout 超时
+interval 间隔
+open打开
+close关
+bar条
+minutes 分钟
+minutes分钟
+12.17
+
+Tag标签child儿童node点
+last末尾;append最后附加创造;创作插入
+在.之前 before正确confirm 的错误flaset的
+true insert 插入insert  index test char 字符lower 减少lower 
+case 实例   split 
+12.19
+create 创造
+
+index test char lower case split return
+create     [kriː'eɪt]                 创造；创作
+create insert before false index test string lower hide show return
+Insert       [ɪn'sɜːt]                 插入
+Before     [bɪ'fɔː]                   在......之前
+True        [truː]                        正确的
+False      [fɔːls; fɒls]                错误的
+Index     ['ɪndeks]                    指标;索引
+test        [test]                          检验;试验
+Char        [tʃɑː]                      字符
+Lower      ['ləʊə]                   减少；降低
+Case       [keɪs]                     实例 
+Split        [splɪt]                     分离；分开
+Return    [rɪ'tɜːn]       返回
+hide show each trim support  live find else prepend delay animate wrap  wrap animate  insert case split  return hide show each trim support live else delay prepend  animate  
+Hide       [haɪd]                     隐藏；隐瞒dne
+Show     [ʃəʊ]                       显示；说明
+Each      [iːtʃ]                        每；各自的
+Trim        [trɪm]                     修剪；整理
+Support  [sə'pɔːt]                 支持；支撑
+
+Live       [laɪv；lɪv]             活的；生动的
+Find       [faɪnd]                  发现；获得
+Else       [els]                     其他；否则
+Prepend [pri:‘pend]           预先考虑
+Delay     [dɪ'leɪ]                  延迟；耽搁
+
+Animate      ['ænɪmeɪt]             推动
+Wrap           [ræp]                    包起来
+Clone          [kləʊn]                  克隆
+drag            [dræg]                  拖拉
+Drop           [drɒp]                    使降落
+
+Slide        [slaɪd]                         滑动
+Normal    ['nɔːm(ə)l]                   正常的
+Fast         [fɑːst]                          快速的
+Slow        [sləʊ]                          减速的
+Fade        [feɪd]                          褪色
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

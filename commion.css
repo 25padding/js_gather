@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 26.66666vw;
+}
+
+body {
+    width: 100%;
+    max-width: 750px;
+    min-width: 320px;
+    margin: auto;
+    font-size: 0.14rem;
+    overflow: hidden;
+    color: #111;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Microsoft Yahei';
+    /* background: linear-gradient(#fff, #dfdfdf); */
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    font-size: 0.16rem;
+}
+
+ul,
+li {
+    list-style: none;
+}

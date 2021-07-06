@@ -1,0 +1,87 @@
+<!-- page lazyloading -->
+<script>
+$(function(){
+  // 设置布尔值用于判断是否该DIV到达过可视区域
+ var scrollflaga = true;
+  // 监听滚轮事件
+ $(window).scroll(function() {
+  // 要加载的DIV的ID
+  // 距离可视区域顶部的距离
+ var a = document.getElementById("myDiv").offsetTop;
+ if (scrollflaga == true) {
+    // 判断
+    // $(window).scrollTop()为返回滚动条的垂直位置
+    // $(window).height()代表了当前可见区域的大小,即你看到的浏览器显示范围
+   if (a >= $(window).scrollTop() && a < ($(window).scrollTop()+$(window).height())) {
+      // 如果到达了可视区域，则设置其布尔值为false，防止一直调用下面函数，即只做一次ajax请求
+     scrollflaga = false;
+      // 你的ajax请求函数
+     loadingFunction();
+ }
+  }
+}
+</script>
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////第二种
+
+/ 安装npm包
+npm install vue-lazyload --save 
+// 引入
+import { VueLazyload } from 'vue-lazyload'
+// 配置
+vue.use(VueLazyload, {
+	preLoad: 1.3,
+	attempt: 2,
+	error: require('../img/icons/error.png'), 
+	loading: require('../img/icons/loading.png') // 注意路径使用require（我这里使用相对路径）
+})
+// img使用v-lazy就可以实现懒加载
+<div class="img-box">
+	<img v-lazy="imgSrc" /> 
+</div>
+// 背景图片使用v-lazy:background-image就可以实现懒加载
+<div v-lazy:background-image="imgSrc"></div>
+
+————————————————
+// css设置loading大小
+.img-box {
+	background: #f4f4f4;
+	height: 100px;
+	// loading大小
+	img[lazy="loading"] {
+		width: 30px;
+		height: 30px;
+	}
+	// 实际图片大小
+	img[lazy="loaded"] {
+		width: 100%;
+		height: 100px;
+	}
+}
+————————————————
+
+
+
+懒加载
+3
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+window.onload  = function () {
+  function loadImg() {
+    var cH = document.documentElement.clientHeight || document.body.clientHeight;
+    var sT = document.documentElement.scrollTop || document.body.scrollTop;
+    var imgs = document.getElementsByClassName('imgs');
+    for(var i=0;i<imgs.length;i++){
+      if (cH + sT + 50 >= imgs[i].offsetTop && imgs[i].getAttribute('data-imgUrl')) {
+        //路径
+        imgs[i].src = imgs[i].getAttribute('data-imgUrl');
+        imgs[i].removeAttribute('data-imgUrl');
+      }
+    }
+  }
+  loadImg();
+  window.onscroll = loadImg;

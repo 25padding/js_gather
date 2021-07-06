@@ -1,0 +1,21 @@
+ {
+ 	"html": {
+ 		"prefix": "aaa",
+ 		"body": [
+ 			"<!DOCTYPE html>",
+ 			"<html>\n",
+ 			"<head>",
+ 			"\t<meta charset=\"UTF-8\">",
+ 			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\">",
+ 			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+ 			"\t<title>Document</title>",
+ 			"\t<link rel=\"stylesheet\" href=\"$1\">",
+ 			"\t<script src=\"$2\"></script>",
+ 			"</head>\n",
+ 			"<body>\n$3",
+ 			"</body>\n",
+ 			"</html>"
+ 		],
+ 		"description": "The full sample code - html5."
+ 	}
+ }

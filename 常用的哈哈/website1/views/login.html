@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+</head>
+
+<body>
+    <!-- <h1>Hello,world!</h1> -->
+
+    <form action="">
+        <input type="text" name="username" placeholder="请输入您的用户名">
+        <input type="password" name="password" placeholder="请输入你的密码">
+        <button type="button">登录</button>
+
+    </form>
+
+</body>
+<script src="../static/ajax.js"></script>
+<script>
+    var username = document.querySelector("input[name='username']");
+    var pasword = document.querySelector("input[name = 'password']")
+
+    //失去焦点时验证用户是否已经存在
+    document.querySelector("button").onclick = function() {
+        // 1.初始化XHR对象
+        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+            var xhr = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // IE 5 ,6
+            var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        // 2.声明请求地址以及请求方式
+        url = "http://127.0.0.1:3000/login";
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        // 3.发送请求
+        xhr.send("username=" + username.value + "&password=" + pasword.value);
+
+        // 4.监听Ajax的状态，接收服务器响应数据
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // console.log(xhr.responseText);
+                // 将接收到的json字符串转为json对象
+                // console.log(xhr.responseText);
+                var data = JSON.parse(xhr.responseText);
+                alert(data.msg);
+                if (data.status == "ok") {
+                    location = "/index.html"
+                }
+
+            }
+        }
+    }
+    document.querySelector("button").onclick = function() {
+        var data = "username=" + username.value + "&password=" + pasword.value;
+        //调用封装好的函数 
+        ajax("/login", function(data) {
+            alert(data.msg);
+            if (data.status == "ok") {
+                location = "/index.html"
+            }
+        }, "POST", data)
+    }
+</script>
+
+</html>
